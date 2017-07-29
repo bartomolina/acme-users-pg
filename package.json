@@ -1,0 +1,29 @@
+{
+  "name": "acme-users-pg",
+  "version": "1.0.0",
+  "description": "1706-FSA-FLEX-NY Weekend assignment 03",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartomolina/acme-users-pg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bartomolina/acme-users-pg/issues"
+  },
+  "homepage": "https://github.com/bartomolina/acme-users-pg#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.3",
+    "method-override": "^2.3.9",
+    "pg": "^7.0.2",
+    "swig": "^1.4.2"
+  }
+}
