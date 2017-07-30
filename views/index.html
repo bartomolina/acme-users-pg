@@ -1,0 +1,23 @@
+{% extends 'layout.html' %} {% block title %}ACME Users - Home{% endblock %} {% block header %}ACME Users PG{% endblock %}
+{% block content %}
+<h2>Home</h2>
+<form action='/' method='POST'>
+    <div class='form-group'>
+        <button class='btn btn-success'>Sync DB</button>
+    </div>
+</form>
+<div class='well'>
+    <form action='/users' method='POST'>
+        <div class='form-group'>
+            <input class='form-control' name='name' placeholder='name' />
+        </div>
+        <div class='check-box'>
+            <label for="isManager">Is Manager</label>
+            <input type="checkbox" id="isManager" name='isManager' />
+        </div>
+        <div class='form-group'>
+            <button class='btn btn-primary'>Save</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

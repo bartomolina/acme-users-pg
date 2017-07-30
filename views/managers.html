@@ -1,0 +1,15 @@
+{% extends 'layout.html' %} {% block title %}ACME Users - Managers{% endblock %} {% block header %}ACME Users PG{%
+endblock %} {% block content %}
+<h2>Managers</h2>
+<ul class="list-group">
+     {% for user in users %}
+    <li class="list-group-item">
+        {{ user.name }}
+        <form action='/users/{{ user.id }}?_method=PUT' method='POST'>
+            <input type='hidden' name='isManager' value='FALSE'>
+            <button class='btn btn-warning'>Remove as Manager</button>
+        </form>
+    </li>
+    {% endfor %} 
+</ul>
+{% endblock %}
