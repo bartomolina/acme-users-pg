@@ -22,7 +22,7 @@ function sync() {
     const sql = `DROP TABLE IF EXISTS users;
         CREATE TABLE users (
         id SERIAL PRIMARY KEY,
-        name VARCHAR(255) NOT NULL,
+        name VARCHAR(255) NOT NULL UNIQUE,
         manager BOOLEAN NOT NULL DEFAULT FALSE
     );`;
     return query(sql);
