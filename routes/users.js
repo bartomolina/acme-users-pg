@@ -27,7 +27,6 @@ router.post('/', (req, res, next) => {
             req.body.isManager ? res.redirect('/users/managers') : res.redirect('/users');
         })
         .catch((err) => {
-            console.log('error----')
             next(err);
         });
 });
