@@ -52,12 +52,13 @@ function getUsers(isManager) {
 }
 
 function createUser(user) {
+    user.name = user.name ? user.name : null;
     const sql = "INSERT INTO users(name, manager) VALUES ($1, $2)";
     return query(sql, [user.name, user.isManager]);
 }
 
 function updateUser(id, prop) {
-    const sql = `UPDATE users SET ${ prop.name } = $1 WHERE id = $2`;
+    const sql = `UPDATE users SET ${prop.name} = $1 WHERE id = $2`;
     return query(sql, [prop.value, id]);
 }
 
